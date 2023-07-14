@@ -20,7 +20,7 @@ export default function LoanCalculator() {
   const [ loan, setLoan ] = useState(Number(15000))
   const [ interest, setInterest ] = useState(Number(4))
   const [ payment, setPayment ] = useState(Number(500))
-  const [ result, setResult ] = useState(Number(0))
+  const [ result, setResult ] = useState(calculateMonthsLeft(loan,interest,payment))
 
   function handleLoanSubmit(event) {
     event.preventDefault()
